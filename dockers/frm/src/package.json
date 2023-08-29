@@ -1,0 +1,11 @@
+{
+    "name":  "frm-metadata",
+    "version": "0.0.1",
+    "description": "This is to load the Metadata used in the Farming Road Map",
+    "dependencies": {
+        "express": "4.18.2",
+        "node-fetch": "^3.3.0",
+        "jszip": "^3.10.1"
+    },
+    "type": "module"
+}

@@ -1,0 +1,74 @@
+version: "3.9"
+
+services:
+
+  swgoh_comlink:
+    container_name: swgoh_comlink
+    image: ghcr.io/swgoh-utils/swgoh-comlink:latest
+
+    restart: always
+
+    environment:
+      APP_NAME: FarmingRoadMap
+      NODE_ENV: production
+      PORT: 2500
+
+    ports:
+    - 2500:2500
+
+  swgoh_stats:
+    container_name: swgoh_status
+    image: ghcr.io/swgoh-utils/swgoh-stats:latest
+    restart: always
+    depends_on:
+      - swgoh_comlink
+
+    environment:
+      - PORT=3223
+      - NODE_ENV=production
+      - USE_SEGMENTS=true
+      - ZIP_GAME_DATA=true
+      - CLIENT_URL=http:swgoh_comlink:2500
+
+    ports:
+    - 3223:3223
+
+  frm:
+    container_name: frm
+    depends_on:
+      - swgoh_comlink
+      - swgoh_stats
+    
+    build: ./frm
+
+    restart: always
+
+    environment:
+      listenport: 3000
+
+    volumes:
+    - frm:/app
+
+    ports:
+    - 3000:3000
+
+  swgohgg_data:
+    container_name: swgohgg_data
+
+    build: ./swgohgg_data
+
+    depends_on:
+      - swgoh_comlink
+      - swgoh_stats
+
+    restart: always
+
+    environment:
+      listenport: 3001
+
+    ports:
+    - 3001:3001
+
+volumes:
+
+  frm: {}
