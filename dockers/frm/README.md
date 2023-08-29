@@ -125,3 +125,5 @@ The function is really simple, call the data from the Google Sheets serve it as 
 There is only a bit of Manipulation to make the JSON response easier to read.
 
 ** You need to update the Google Sheets link to your swgoh_data sheet with your secret key
+
+PLACEHOLDER
