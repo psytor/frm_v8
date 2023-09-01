@@ -59,6 +59,10 @@ Then all the modules breaking down the Farming Road Map.
 
 You'll get the details below
 
+#### Exports
+
+This will be some of the swgoh_comlink put into memory to be used with other Modules
+
 #### / root
 
 Is only serving an index.html page which is in the /public folder to make sure to test the website easily and with a bit of information.
@@ -126,4 +130,26 @@ There is only a bit of Manipulation to make the JSON response easier to read.
 
 ** You need to update the Google Sheets link to your swgoh_data sheet with your secret key
 
-PLACEHOLDER
+ #### Function gamedataMemory
+
+ This functions pulls data from swgoh_comlink to keep some of the data in Memory for faster response of the server.
+
+ Every calls for data on swgoh_comlink starts with a call to get the latest game Version.
+
+ Then with the latest game version, it will pull the requested segment and place it in Memory.
+
+ #### Function localENGMemory
+
+This functions pulls data from swgoh_comlink to get the Localization (proper name for characters and ship).
+
+And placing it in Memory.
+
+There is some file manipulation in this function as the received part is many smaller files per language.
+
+#### /frm/player/:allycode and /frm/auto/:allycode
+
+This is the main command that fetch the players data from swgoh_comlink.
+
+It then manipulates the data with the data in Memory to give proper characters names.
+
+It also connects to swgoh_stats to pull certain information about the accounts that are not available through swgoh_comlink like Galactic Power.
