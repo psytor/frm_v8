@@ -1,3 +1,11 @@
+# Farming Road Map Server
+
+If you have questions on the following code, I will keep the [Farming Road Map Discord Server available](https://discord.com/invite/ZaUcdrY).
+
+If everything is copied fine, you should only need to use the dockers folder and use docker compose to build everything up automatically.
+
+The one thing that has to be done - Please check the README.md of the Farming Road Map portion to tell you which line to edit with a different link to either Google sheets or the Farming Road Map server itself
+
 # Google Sheets
 ## swgoh_data
 
@@ -9,6 +17,14 @@ Details and code are here: [swgoh_data](https://github.com/psytor/frm_v8/tree/ma
 ## Server Side Scripts
 
 I was running everything under dockers, so it's easier to reinstall if needed.
+
+## THE FRM
+
+Original page is here: [Check FRM on Google Sheets](https://docs.google.com/spreadsheets/d/1GuPkazIPuqtGjEwTYD2Y6HTYw34OHLRrvfeNiIbrA4c/copy)
+
+Details and code are here: [frm_v8](https://github.com/psytor/frm_v8/tree/main/google_sheets/frm).
+
+In the FRM code I already had a lot of comments that should help you do everything with it.
 
 ## Dockers
 
