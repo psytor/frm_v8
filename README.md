@@ -1,14 +1,3 @@
-# WORK IN PROGRESS
-This is just to show the current work available - I'm still updating all the code and details.
-This Work in Progress mention sould be removed when I'm done
-# Farming Road Map Server
-
-If you have questions on the following code, I will keep the [Farming Road Map Discord Server available](https://discord.com/invite/ZaUcdrY).
-
-If everything is copied fine, you should only need to use the dockers folder and use docker compose to build everything up automatically.
-
-The one thing that has to be done - Please check the README.md of the Farming Road Map portion to tell you which line to edit with a different link to either Google sheets or the Farming Road Map server itself
-
 # Google Sheets
 ## swgoh_data
 
