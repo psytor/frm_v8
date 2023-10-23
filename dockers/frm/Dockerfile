@@ -9,4 +9,4 @@ RUN apk update && \
     npm install && \
     apk add dumb-init
 
-CMD ["dumb-init","node","ggdata_server.js"]
+CMD ["dumb-init","node","server.js"]
