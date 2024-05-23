@@ -59,7 +59,7 @@ services:
 
     depends_on:
       - swgoh_comlink
-      - swgoh_stats
+      - swgoh_status
 
     restart: always
 
