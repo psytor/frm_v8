@@ -37,7 +37,7 @@ services:
     container_name: frm
     depends_on:
       - swgoh_comlink
-      - swgoh_stats
+      - swgoh_status
     
     build: ./frm
 
